@@ -2,7 +2,7 @@ import React from "react";
 import logo from "./logo.svg";
 import { Counter } from "./features/counter/Counter";
 import "./App.css";
-import ProductList from "./features/productList/components/ProductList";
+import ProductList from "./features/product/components/ProductList";
 import NavBar from "./features/navbar/NavBar";
 import Home from "./pages/Home";
 import Login from "./features/Auth/components/Login";
@@ -20,7 +20,7 @@ import SignupPage from "./pages/SignupPage";
 import Cart from "./features/cart/Cart";
 import CartPage from "./pages/CartPage";
 import Checkout from "./pages/Checkout";
-import ProductDetail from "./features/productList/components/ProductDetails";
+import ProductDetail from "./features/product/components/ProductDetails";
 import ProductDetailPage from "./pages/ProductDetailPage";
 
 const router = createBrowserRouter([
