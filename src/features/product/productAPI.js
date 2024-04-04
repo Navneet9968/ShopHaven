@@ -7,14 +7,22 @@ export function fetchAllProducts() {
   });
 }
 
-export function fetchProductsByFilters(filter) {
+export function fetchProductsByFilters(filter, sort) {
   //TODO : implement multi filter logic
-
-  // assuming filter is like {category: "electronics"}
+  //filter = {category: ["smartphones","laptops"], brand: "Apple"}
+  //sort = {_sort:"price",_order:"asc"}
   let queryString = "";
   for (let key in filter) {
+    const categoryValues = filter[key];
+
     // For example, if filter was { color: 'red', size: 'large' },  queryString would be color=red&size=large&
-    queryString += `${key}=${filter[key]}&`;
+    if (categoryValues.length > 0) {
+      const lastCategoryValue = categoryValues[categoryValues.length - 1];
+      queryString += `${key}=${lastCategoryValue}&`;
+    }
+  }
+
+  for (let key in sort) {
   }
   return new Promise(async (resolve) => {
     const response = await fetch(
