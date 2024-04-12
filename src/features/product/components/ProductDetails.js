@@ -48,7 +48,6 @@ export default function ProductDetail() {
     <div className="bg-white">
       {product && (
         <div className="pt-6">
-          ``
           <nav aria-label="Breadcrumb">
             <ol
               role="list"
