@@ -5,6 +5,8 @@ import { selectAllProducts, selectProductById } from "../productSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProductByIdAsync } from "../productSlice";
 import { useParams } from "react-router-dom";
+import { addToCartAsync } from "../../cart/cartSlice";
+import { selectLoggedInUser } from "../../Auth/authSlice";
 
 //TODO : In server data we will add colors,sizes ,highlights etc
 const colors = [
@@ -22,11 +24,11 @@ const sizes = [
   { name: "2XL", inStock: true },
   { name: "3XL", inStock: true },
 ];
-const highlights= [
-  'Hand cut and sewn locally',
-  'Dyed with our proprietary colors',
-  'Pre-washed & pre-shrunk',
-  'Ultra-soft 100% cotton',
+const highlights = [
+  "Hand cut and sewn locally",
+  "Dyed with our proprietary colors",
+  "Pre-washed & pre-shrunk",
+  "Ultra-soft 100% cotton",
 ];
 
 function classNames(...classes) {
@@ -37,8 +39,16 @@ export default function ProductDetail() {
   const [selectedColor, setSelectedColor] = useState(colors[0]);
   const [selectedSize, setSelectedSize] = useState(sizes[2]);
   const product = useSelector(selectProductById);
+  console.log(product);
   const dispatch = useDispatch();
   const params = useParams();
+  const user = useSelector(selectLoggedInUser);
+
+  const handleAddToCart = (e) => {
+    //TODO : Add to cart functionality
+    e.preventDefault();
+    dispatch(addToCartAsync({ ...product, quantity: 1, user: user.id }));
+  };
 
   useEffect(() => {
     dispatch(fetchProductByIdAsync(params.id));
@@ -283,6 +293,7 @@ export default function ProductDetail() {
 
                 <button
                   type="submit"
+                  onClick={handleAddToCart}
                   className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                 >
                   Add to Cart
@@ -310,10 +321,10 @@ export default function ProductDetail() {
                 <div className="mt-4">
                   <ul role="list" className="list-disc space-y-2 pl-4 text-sm">
                     {highlights.map((highlight) => (
-                        <li key={highlight} className="text-gray-400">
-                          <span className="text-gray-600">{highlight}</span>
-                        </li>
-                      ))}
+                      <li key={highlight} className="text-gray-400">
+                        <span className="text-gray-600">{highlight}</span>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
