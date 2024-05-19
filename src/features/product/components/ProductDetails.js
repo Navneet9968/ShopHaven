@@ -45,9 +45,12 @@ export default function ProductDetail() {
   const user = useSelector(selectLoggedInUser);
 
   const handleAddToCart = (e) => {
-    //TODO : Add to cart functionality
     e.preventDefault();
-    dispatch(addToCartAsync({ ...product, quantity: 1, user: user.id }));
+    //TODO : Add to cart functionality
+    const newItem = {...product, quantity: 1, user: user.id};
+    delete newItem['id'];
+    
+    dispatch(addToCartAsync(newItem));
   };
 
   useEffect(() => {
