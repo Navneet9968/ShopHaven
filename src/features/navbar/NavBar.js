@@ -23,8 +23,8 @@ const navigation = [
   { name: "Reports", href: "#", current: false },
 ];
 const userNavigation = [
-  { name: "Your Profile", link: "/" },
-  { name: "Settings", link: "/" },
+  { name: "My Profile", link: "/profile" },
+  { name: "My Orders", link: "/orders" },
   { name: "Sign out", link: "/login" },
 ];
 
@@ -89,7 +89,7 @@ export default function NavBar({ children }) {
                           />
                         </button>
                       </Link>
-                      {items.length>0 && (
+                      {items.length > 0 && (
                         <span className="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10 mb-7 -ml-3 z-10">
                           {items.length}
                         </span>
@@ -209,7 +209,7 @@ export default function NavBar({ children }) {
                         />
                       </button>
                     </Link>
-                    {items.length>0 && (
+                    {items.length > 0 && (
                       <span className="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10 mb-7 -ml-3 z-10">
                         {items.length}
                       </span>

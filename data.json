@@ -2471,74 +2471,34 @@
       "addresses": []
     }
   ],
-  "cart": [
-    {
-      "id": "01a2",
-      "title": "iPhone X",
-      "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
-      "price": 899,
-      "discountPercentage": 17.94,
-      "rating": 4.44,
-      "stock": 34,
-      "brand": "Apple",
-      "category": "smartphones",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/2/1.jpg",
-        "https://cdn.dummyjson.com/product-images/2/2.jpg",
-        "https://cdn.dummyjson.com/product-images/2/3.jpg",
-        "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg"
-      ],
-      "quantity": 1,
-      "user": "f0cd"
-    },
-    {
-      "id": "be8d",
-      "title": "OPPOF19",
-      "description": "OPPO F19 is officially announced on April 2021.",
-      "price": 280,
-      "discountPercentage": 17.91,
-      "rating": 4.3,
-      "stock": 123,
-      "brand": "OPPO",
-      "category": "smartphones",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/4/thumbnail.jpg",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/4/1.jpg",
-        "https://cdn.dummyjson.com/product-images/4/2.jpg",
-        "https://cdn.dummyjson.com/product-images/4/3.jpg",
-        "https://cdn.dummyjson.com/product-images/4/4.jpg",
-        "https://cdn.dummyjson.com/product-images/4/thumbnail.jpg"
-      ],
-      "quantity": 1,
-      "user": "f0cd"
-    },
-    {
-      "id": "eb01",
-      "title": "Huawei P30",
-      "description": "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
-      "price": 499,
-      "discountPercentage": 10.58,
-      "rating": 4.09,
-      "stock": 32,
-      "brand": "Huawei",
-      "category": "smartphones",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/5/thumbnail.jpg",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/5/1.jpg",
-        "https://cdn.dummyjson.com/product-images/5/2.jpg",
-        "https://cdn.dummyjson.com/product-images/5/3.jpg"
-      ],
-      "quantity": 1,
-      "user": "f0cd"
-    }
-  ],
+  "cart": [],
   "orders": [
     {
-      "id": "7866",
+      "id": "144d",
       "items": [
         {
-          "id": "01a2",
+          "id": "1252",
+          "title": "iPhone 9",
+          "description": "An apple mobile which is nothing like apple",
+          "price": 549,
+          "discountPercentage": 12.96,
+          "rating": 4.69,
+          "stock": 94,
+          "brand": "Apple",
+          "category": "smartphones",
+          "thumbnail": "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
+          "images": [
+            "https://cdn.dummyjson.com/product-images/1/1.jpg",
+            "https://cdn.dummyjson.com/product-images/1/2.jpg",
+            "https://cdn.dummyjson.com/product-images/1/3.jpg",
+            "https://cdn.dummyjson.com/product-images/1/4.jpg",
+            "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg"
+          ],
+          "quantity": 1,
+          "user": "f0cd"
+        },
+        {
+          "id": "5861",
           "title": "iPhone X",
           "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
           "price": 899,
@@ -2556,50 +2516,10 @@
           ],
           "quantity": 1,
           "user": "f0cd"
-        },
-        {
-          "id": "be8d",
-          "title": "OPPOF19",
-          "description": "OPPO F19 is officially announced on April 2021.",
-          "price": 280,
-          "discountPercentage": 17.91,
-          "rating": 4.3,
-          "stock": 123,
-          "brand": "OPPO",
-          "category": "smartphones",
-          "thumbnail": "https://cdn.dummyjson.com/product-images/4/thumbnail.jpg",
-          "images": [
-            "https://cdn.dummyjson.com/product-images/4/1.jpg",
-            "https://cdn.dummyjson.com/product-images/4/2.jpg",
-            "https://cdn.dummyjson.com/product-images/4/3.jpg",
-            "https://cdn.dummyjson.com/product-images/4/4.jpg",
-            "https://cdn.dummyjson.com/product-images/4/thumbnail.jpg"
-          ],
-          "quantity": 1,
-          "user": "f0cd"
-        },
-        {
-          "id": "eb01",
-          "title": "Huawei P30",
-          "description": "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
-          "price": 499,
-          "discountPercentage": 10.58,
-          "rating": 4.09,
-          "stock": 32,
-          "brand": "Huawei",
-          "category": "smartphones",
-          "thumbnail": "https://cdn.dummyjson.com/product-images/5/thumbnail.jpg",
-          "images": [
-            "https://cdn.dummyjson.com/product-images/5/1.jpg",
-            "https://cdn.dummyjson.com/product-images/5/2.jpg",
-            "https://cdn.dummyjson.com/product-images/5/3.jpg"
-          ],
-          "quantity": 1,
-          "user": "f0cd"
         }
       ],
-      "totalAmount": 1678,
-      "totalItems": 3,
+      "totalAmount": 1448,
+      "totalItems": 2,
       "user": {
         "id": "f0cd",
         "email": "test@gmail.com",
@@ -2625,8 +2545,99 @@
           }
         ]
       },
-      "selectedAddress": null,
-      "paymentMethod": "cash"
+      "selectedAddress": {
+        "name": "Navneet",
+        "email": "nk9810631184@gmail.com",
+        "phone": "90478590",
+        "street": "House 10 MOhan Garden",
+        "city": "Delhi",
+        "state": "Delhi",
+        "pinCode": "110059"
+      },
+      "paymentMethod": "cash",
+      "status": "pending"
+    },
+    {
+      "id": "fdd8",
+      "items": [
+        {
+          "id": "5ced",
+          "title": "Huawei P30",
+          "description": "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
+          "price": 499,
+          "discountPercentage": 10.58,
+          "rating": 4.09,
+          "stock": 32,
+          "brand": "Huawei",
+          "category": "smartphones",
+          "thumbnail": "https://cdn.dummyjson.com/product-images/5/thumbnail.jpg",
+          "images": [
+            "https://cdn.dummyjson.com/product-images/5/1.jpg",
+            "https://cdn.dummyjson.com/product-images/5/2.jpg",
+            "https://cdn.dummyjson.com/product-images/5/3.jpg"
+          ],
+          "quantity": 1,
+          "user": "f0cd"
+        },
+        {
+          "id": "a9a3",
+          "title": "MacBook Pro",
+          "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
+          "price": 1749,
+          "discountPercentage": 11.02,
+          "rating": 4.57,
+          "stock": 83,
+          "brand": "Apple",
+          "category": "laptops",
+          "thumbnail": "https://cdn.dummyjson.com/product-images/6/thumbnail.png",
+          "images": [
+            "https://cdn.dummyjson.com/product-images/6/1.png",
+            "https://cdn.dummyjson.com/product-images/6/2.jpg",
+            "https://cdn.dummyjson.com/product-images/6/3.png",
+            "https://cdn.dummyjson.com/product-images/6/4.jpg"
+          ],
+          "quantity": 1,
+          "user": "f0cd"
+        }
+      ],
+      "totalAmount": 2248,
+      "totalItems": 2,
+      "user": {
+        "id": "f0cd",
+        "email": "test@gmail.com",
+        "password": "Codingislove@1",
+        "addresses": [
+          {
+            "name": "Navneet",
+            "email": "nk9810631184@gmail.com",
+            "phone": "90478590",
+            "street": "House 10 MOhan Garden",
+            "city": "Delhi",
+            "state": "Delhi",
+            "pinCode": "110059"
+          },
+          {
+            "name": "Navneet",
+            "email": "nk9810631184@gmail.com",
+            "phone": "90478590",
+            "street": "House 10 MOhan Garden",
+            "city": "Delhi",
+            "state": "Delhi",
+            "pinCode": "110059"
+          }
+        ]
+      },
+      "selectedAddress": {
+        "name": "Navneet",
+        "email": "nk9810631184@gmail.com",
+        "phone": "90478590",
+        "street": "House 10 MOhan Garden",
+        "city": "Delhi",
+        "state": "Delhi",
+        "pinCode": "110059"
+      },
+      "paymentMethod": "cash",
+      "status": "pending"
     }
   ]
 }
