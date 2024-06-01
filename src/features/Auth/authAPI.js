@@ -1,4 +1,5 @@
 import { isRejected } from "@reduxjs/toolkit";
+import { updateUser } from "../user/userAPI";
 
 // A mock function to mimic making an async request for data
 export function createUser(userData) {
@@ -36,18 +37,4 @@ export function checkUser(loginInfo) {
   });
 }
 
-export function updateUser(update) {
-  return new Promise(async (resolve) => {
-    const response = await fetch("http://localhost:8080/users/"+update.id, {
-      method: "PATCH",
-      body: JSON.stringify(update),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
 
-    const data = await response.json();
-    //TODO : on server it will only return email not password
-    resolve({ data });
-  });
-}
