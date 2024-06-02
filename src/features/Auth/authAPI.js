@@ -18,6 +18,14 @@ export function createUser(userData) {
   });
 }
 
+export function signOut(userData) {
+  return new Promise(async (resolve) => {
+    
+    //TODO : on server we will remove user session
+    resolve({ data:"successfully signed out" });
+  });
+}
+
 export function checkUser(loginInfo) {
   return new Promise(async (resolve, reject) => {
     const email = loginInfo.email;

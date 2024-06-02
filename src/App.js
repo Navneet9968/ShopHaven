@@ -1,12 +1,6 @@
 import React, { useEffect } from "react";
-import logo from "./logo.svg";
-import { Counter } from "./features/counter/Counter";
 import "./App.css";
-import ProductList from "./features/product/components/ProductList";
-import NavBar from "./features/navbar/NavBar";
 import Home from "./pages/Home";
-import Login from "./features/Auth/components/Login";
-import Signup from "./features/Auth/components/Signup";
 
 //router
 import {
@@ -17,10 +11,8 @@ import {
 } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
-import Cart from "./features/cart/Cart";
 import CartPage from "./pages/CartPage";
 import Checkout from "./pages/Checkout";
-import ProductDetail from "./features/product/components/ProductDetails";
 import ProductDetailPage from "./pages/ProductDetailPage";
 import Protected from "./features/Auth/components/Protected";
 import { fetchItemsByUserIdAsync } from "./features/cart/cartSlice";
@@ -29,10 +21,10 @@ import { useDispatch, useSelector } from "react-redux";
 import PageNotFound from "./pages/404";
 import OrderSuccessPage from "./pages/OrderSuccessPage";
 import UserOrdersPage from "./pages/UserOrdersPage";
-import UserProfile from "./features/user/components/UserProfile";
 import UserProfilePage from "./pages/UserProfilePage";
-import { fetchLoggedInUser } from "./features/user/userAPI";
 import { fetchLoggedInUserAsync } from "./features/user/userSlice";
+import LogOut from "./features/Auth/components/LogOut";
+import ForgotPasswordPage from "./pages/ForgotPasswordPage";
 
 const router = createBrowserRouter([
   {
@@ -87,6 +79,14 @@ const router = createBrowserRouter([
   {
     path: "/profile",
     element: <UserProfilePage />,
+  },
+  {
+    path: "/logout",
+    element: <LogOut />,
+  },
+  {
+    path: "/forgot-password",
+    element: <ForgotPasswordPage />,
   },
   {
     path: "*",
