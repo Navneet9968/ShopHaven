@@ -85,7 +85,6 @@ function Checkout() {
               className="mt-12 bg-white px-8 py-12"
               noValidate
               onSubmit={handleSubmit((data) => {
-                console.log(data);
                 dispatch(
                   updateUserAsync({
                     ...user,

@@ -35,7 +35,6 @@ export default function ForgotPassword() {
             className="space-y-6"
             onSubmit={handleSubmit((data) => {
               //TODO: implementation on backend with email
-              console.log(data);
             })}
           >
             <div>

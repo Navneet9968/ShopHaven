@@ -15,11 +15,41 @@ export function fetchProductById(id) {
   });
 }
 
+export function createProduct(product) {
+  return new Promise(async (resolve) => {
+    const response = await fetch("http://localhost:8080/products/", {
+      method: "POST",
+      body: JSON.stringify(product),
+      headers: { "Content-Type": "application/json" },
+    });
+    const data = await response.json();
+    resolve({ data });
+  });
+}
+
+export function updateProduct(update) {
+  return new Promise(async (resolve) => {
+    const response = await fetch(
+      "http://localhost:8080/products/" + update.id,
+      {
+        method: "PATCH",
+        body: JSON.stringify(update),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    const data = await response.json();
+    resolve({ data });
+  });
+}
+
 export function fetchProductsByFilters(filter, sort, pagination) {
   //TODO : implement multi filter logic
   //filter = {category: ["smartphones","laptops"], brand: "Apple"}
   //sort = {_sort:"price",_order:"asc"}
   //pagination={_page:1,_limit:10 }
+  //TODO:Server will filter deleted products in case of non-admin user
 
   let queryString = "";
   for (let key in filter) {
@@ -42,7 +72,6 @@ export function fetchProductsByFilters(filter, sort, pagination) {
     );
     const data = await response.json();
     const totalItems = response.headers.get("X-Total-Count");
-    console.log("totalItems", totalItems);
     resolve({ data: { products: data, totalItems: totalItems } });
   });
 }

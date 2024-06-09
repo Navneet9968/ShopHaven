@@ -41,7 +41,6 @@ export default function Login() {
               dispatch(
                 checkUserAsync({ email: data.email, password: data.password })
               );
-              console.log(data);
             })}
           >
             <div>

@@ -64,6 +64,9 @@ export default function UserProfile() {
           <h3 className="my-5 text-xl font-bold tracking-tight text-red-900">
             Email Address :{user.email ? user.email : "New User"}
           </h3>
+          {user.role==="admin" && <h3 className="my-5 text-xl font-bold tracking-tight text-red-900">
+            Role : {user.role}
+          </h3>}
         </div>
 
         <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
@@ -253,7 +256,6 @@ export default function UserProfile() {
                   className="mt-12 bg-white px-8 py-12"
                   noValidate
                   onSubmit={handleSubmit((data) => {
-                    console.log(data);
                     handleEdit(data, index);
                     reset();
                     // checkUserAsync({ email: data.email, password: data.password })
