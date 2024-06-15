@@ -8,6 +8,7 @@ import {
   selectAllProducts,
   selectBrands,
   selectCategories,
+  selectProductListStatus,
   selectTotalItems,
 } from "../productSlice";
 import { Dialog, Disclosure, Menu, Transition } from "@headlessui/react";
@@ -25,6 +26,7 @@ import {
 import { Link } from "react-router-dom";
 import { ITEMS_PER_PAGE, discountedPrice } from "../../../app/constants";
 import Pagination from "../../common/Pagination";
+import { Hourglass } from "react-loader-spinner";
 
 const sortOptions = [
   { name: "Best Rating", sort: "rating", order: "desc", current: false },
@@ -41,6 +43,7 @@ export default function ProductList() {
   const products = useSelector(selectAllProducts);
   const brands = useSelector(selectBrands);
   const categories = useSelector(selectCategories);
+  const status = useSelector(selectProductListStatus);
   const filters = [
     {
       id: "category",
@@ -93,7 +96,6 @@ export default function ProductList() {
     }
     setSort(newSort);
   };
-  
 
   const handlePage = (page) => {
     setPage(page);
@@ -208,6 +210,17 @@ export default function ProductList() {
                 <DesktopFilter handleFilter={handleFilter} filters={filters} />
 
                 {/* Product grid */}
+                {status === "loading" ? (
+                  <Hourglass
+                    visible={true}
+                    height="80"
+                    width="80"
+                    ariaLabel="hourglass-loading"
+                    wrapperStyle={{}}
+                    wrapperClass=""
+                    colors={["#306cce", "#72a1ed"]}
+                  />
+                ) : null}
                 <ProductGrid products={products} />
                 {/* Product Grid End */}
               </div>
@@ -463,6 +476,12 @@ function ProductGrid({ products }) {
                           </p>
                         </div>
                       )}
+                      {product.stock <= 0 && (
+                        <div>
+                          <p className="text-sm text-red-500 ">Out of Stock</p>
+                        </div>
+                      )}
+                      {/* {TODO: will not be needed when backend implemented} */}
                     </div>
                   </div>
                 </Link>

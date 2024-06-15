@@ -5,9 +5,10 @@ import { selectAllProducts, selectProductById } from "../productSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProductByIdAsync } from "../productSlice";
 import { useParams } from "react-router-dom";
-import { addToCartAsync } from "../../cart/cartSlice";
+import { addToCartAsync, selectItems } from "../../cart/cartSlice";
 import { selectLoggedInUser } from "../../Auth/authSlice";
 import { discountedPrice } from "../../../app/constants";
+import { useAlert } from "react-alert";
 
 //TODO : In server data we will add colors,sizes ,highlights etc
 const colors = [
@@ -37,6 +38,7 @@ function classNames(...classes) {
 }
 
 export default function ProductDetail() {
+  const alert = useAlert();
   const [selectedColor, setSelectedColor] = useState(colors[0]);
   const [selectedSize, setSelectedSize] = useState(sizes[2]);
   const product = useSelector(selectProductById);
@@ -44,14 +46,25 @@ export default function ProductDetail() {
   const dispatch = useDispatch();
   const params = useParams();
   const user = useSelector(selectLoggedInUser);
+  const items = useSelector(selectItems);
 
   const handleAddToCart = (e) => {
     e.preventDefault();
     //TODO : Add to cart functionality
-    const newItem = { ...product, quantity: 1, user: user.id };
-    delete newItem["id"];
-
-    dispatch(addToCartAsync(newItem));
+    if (items.findIndex((item) => item.productId === product.id) < 0) {
+      const newItem = {
+        ...product,
+        productId: product.id,
+        quantity: 1,
+        user: user.id,
+      };
+      delete newItem["id"];
+      dispatch(addToCartAsync(newItem));
+      alert.success("Product added to cart");
+    } else {
+      console.log("Product already in cart");
+      alert.show("Product already in cart");
+    }
   };
 
   useEffect(() => {

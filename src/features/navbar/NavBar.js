@@ -11,9 +11,8 @@ import { selectItems } from "../cart/cartSlice";
 import { selectLoggedInUser } from "../Auth/authSlice";
 
 const navigation = [
-  { name: "Dashboard", link: "#", user: true },
-  { name: "Team", link: "#", user: true },
-  { name: "Admin", link: "/admin", admin: true },
+  { name: "Products", link: "/", user: true },
+  { name: "Edit Products", link: "/admin", admin: true },
   { name: "Orders", link: "/admin/orders", admin: true },
 ];
 const userNavigation = [
@@ -42,8 +41,8 @@ export default function NavBar({ children }) {
                     <div className="flex-shrink-0">
                       <Link to={"/"}>
                         <img
-                          className="h-8 w-8"
-                          src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                          className="h-12 "
+                          src="/Logo.png"
                           alt="Your Company"
                         />
                       </Link>
@@ -231,13 +230,13 @@ export default function NavBar({ children }) {
           )}
         </Disclosure>
 
-        <header className="bg-white shadow">
+        {/* <header className="bg-white shadow">
           <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
             <h1 className="text-3xl font-bold tracking-tight text-gray-900">
               ShopHaven
             </h1>
           </div>
-        </header>
+        </header> */}
         <main>
           <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
             {children}
