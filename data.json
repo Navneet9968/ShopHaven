@@ -2519,7 +2519,28 @@
       "role": "admin"
     }
   ],
-  "cart": [],
+  "cart": [
+    {
+      "id": "b885",
+      "title": "Samsung Galaxy Book",
+      "description": "Samsung Galaxy Book S (2020) Laptop With Intel Lakefield Chip, 8GB of RAM Launched",
+      "price": 1499,
+      "discountPercentage": 4.15,
+      "rating": 4.25,
+      "stock": 50,
+      "brand": "Samsung",
+      "category": "laptops",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/7/thumbnail.jpg",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/7/1.jpg",
+        "https://cdn.dummyjson.com/product-images/7/2.jpg",
+        "https://cdn.dummyjson.com/product-images/7/3.jpg",
+        "https://cdn.dummyjson.com/product-images/7/thumbnail.jpg"
+      ],
+      "quantity": 1,
+      "user": "a0dd"
+    }
+  ],
   "orders": [
     {
       "id": "144d",
@@ -2603,7 +2624,7 @@
         "pinCode": "110059"
       },
       "paymentMethod": "cash",
-      "status": "pending"
+      "status": "dispatched"
     },
     {
       "id": "fdd8",
@@ -2685,7 +2706,7 @@
         "pinCode": "110059"
       },
       "paymentMethod": "cash",
-      "status": "pending"
+      "status": "cancelled"
     },
     {
       "id": "2f24",
@@ -3114,6 +3135,488 @@
         "id": "f0cd",
         "email": "test@gmail.com",
         "password": "Codingislove@1",
+        "addresses": [
+          {
+            "name": "Navneet",
+            "email": "navneetkumar9810@gmail.com",
+            "phone": "9968567891",
+            "street": "7th Street",
+            "city": "New Delhi",
+            "state": "Delhi",
+            "pinCode": "110053"
+          },
+          {
+            "name": "Navneet",
+            "email": "Second Address",
+            "phone": "8920394834",
+            "street": "Second Street",
+            "city": "Second City",
+            "state": "Second State",
+            "pinCode": "110023"
+          },
+          {
+            "name": "Navneet",
+            "email": "navneetkumar9810@gmail.com",
+            "phone": "6549873138",
+            "street": "3rd Main Street",
+            "city": "New delhi",
+            "state": "delhi",
+            "pinCode": "110058"
+          }
+        ]
+      },
+      "selectedAddress": {
+        "name": "Navneet",
+        "email": "navneetkumar9810@gmail.com",
+        "phone": "9968567891",
+        "street": "7th Street",
+        "city": "New Delhi",
+        "state": "Delhi",
+        "pinCode": "110053"
+      },
+      "paymentMethod": "cash",
+      "status": "pending"
+    },
+    {
+      "id": "1cc7",
+      "items": [
+        {
+          "id": "ac82",
+          "title": "OPPOF19",
+          "description": "OPPO F19 is officially announced on April 2021.",
+          "price": 280,
+          "discountPercentage": 17.91,
+          "rating": 4.3,
+          "stock": 123,
+          "brand": "OPPO",
+          "category": "smartphones",
+          "thumbnail": "https://cdn.dummyjson.com/product-images/4/thumbnail.jpg",
+          "images": [
+            "https://cdn.dummyjson.com/product-images/4/1.jpg",
+            "https://cdn.dummyjson.com/product-images/4/2.jpg",
+            "https://cdn.dummyjson.com/product-images/4/3.jpg",
+            "https://cdn.dummyjson.com/product-images/4/4.jpg",
+            "https://cdn.dummyjson.com/product-images/4/thumbnail.jpg"
+          ],
+          "quantity": 1,
+          "user": "f0cd"
+        }
+      ],
+      "totalAmount": 230,
+      "totalItems": 1,
+      "user": {
+        "id": "f0cd",
+        "email": "test@gmail.com",
+        "password": "Codingislove@1",
+        "role": "user",
+        "addresses": [
+          {
+            "name": "Navneet",
+            "email": "navneetkumar9810@gmail.com",
+            "phone": "9968567891",
+            "street": "7th Street",
+            "city": "New Delhi",
+            "state": "Delhi",
+            "pinCode": "110053"
+          },
+          {
+            "name": "Navneet",
+            "email": "Second Address",
+            "phone": "8920394834",
+            "street": "Second Street",
+            "city": "Second City",
+            "state": "Second State",
+            "pinCode": "110023"
+          },
+          {
+            "name": "Navneet",
+            "email": "navneetkumar9810@gmail.com",
+            "phone": "6549873138",
+            "street": "3rd Main Street",
+            "city": "New delhi",
+            "state": "delhi",
+            "pinCode": "110058"
+          }
+        ]
+      },
+      "selectedAddress": {
+        "name": "Navneet",
+        "email": "navneetkumar9810@gmail.com",
+        "phone": "6549873138",
+        "street": "3rd Main Street",
+        "city": "New delhi",
+        "state": "delhi",
+        "pinCode": "110058"
+      },
+      "paymentMethod": "cash",
+      "status": "dispatched"
+    },
+    {
+      "id": "217d",
+      "items": [
+        {
+          "id": "ec4b",
+          "title": "Microsoft Surface Laptop 4",
+          "description": "Style and speed. Stand out on HD video calls backed by Studio Mics. Capture ideas on the vibrant touchscreen.",
+          "price": 1499,
+          "discountPercentage": 10.23,
+          "rating": 4.43,
+          "stock": 68,
+          "brand": "Microsoft Surface",
+          "category": "laptops",
+          "thumbnail": "https://cdn.dummyjson.com/product-images/8/thumbnail.jpg",
+          "images": [
+            "https://cdn.dummyjson.com/product-images/8/1.jpg",
+            "https://cdn.dummyjson.com/product-images/8/2.jpg",
+            "https://cdn.dummyjson.com/product-images/8/3.jpg",
+            "https://cdn.dummyjson.com/product-images/8/4.jpg",
+            "https://cdn.dummyjson.com/product-images/8/thumbnail.jpg"
+          ],
+          "quantity": 4,
+          "user": "f0cd"
+        }
+      ],
+      "totalAmount": 5384,
+      "totalItems": 4,
+      "user": {
+        "id": "f0cd",
+        "email": "test@gmail.com",
+        "password": "Codingislove@1",
+        "role": "user",
+        "addresses": [
+          {
+            "name": "Navneet",
+            "email": "navneetkumar9810@gmail.com",
+            "phone": "9968567891",
+            "street": "7th Street",
+            "city": "New Delhi",
+            "state": "Delhi",
+            "pinCode": "110053"
+          },
+          {
+            "name": "Navneet",
+            "email": "Second Address",
+            "phone": "8920394834",
+            "street": "Second Street",
+            "city": "Second City",
+            "state": "Second State",
+            "pinCode": "110023"
+          },
+          {
+            "name": "Navneet",
+            "email": "navneetkumar9810@gmail.com",
+            "phone": "6549873138",
+            "street": "3rd Main Street",
+            "city": "New delhi",
+            "state": "delhi",
+            "pinCode": "110058"
+          }
+        ]
+      },
+      "selectedAddress": {
+        "name": "Navneet",
+        "email": "navneetkumar9810@gmail.com",
+        "phone": "9968567891",
+        "street": "7th Street",
+        "city": "New Delhi",
+        "state": "Delhi",
+        "pinCode": "110053"
+      },
+      "paymentMethod": "cash",
+      "status": "pending"
+    },
+    {
+      "id": "b874",
+      "items": [
+        {
+          "id": "5830",
+          "title": "HP Pavilion 15-DK1056WM",
+          "description": "HP Pavilion 15-DK1056WM Gaming Laptop 10th Gen Core i5, 8GB, 256GB SSD, GTX 1650 4GB, Windows 10",
+          "price": 1099,
+          "discountPercentage": 6.18,
+          "rating": 4.43,
+          "stock": 89,
+          "brand": "HP Pavilion",
+          "category": "laptops",
+          "thumbnail": "https://cdn.dummyjson.com/product-images/10/thumbnail.jpeg",
+          "images": [
+            "https://cdn.dummyjson.com/product-images/10/1.jpg",
+            "https://cdn.dummyjson.com/product-images/10/2.jpg",
+            "https://cdn.dummyjson.com/product-images/10/3.jpg",
+            "https://cdn.dummyjson.com/product-images/10/thumbnail.jpeg"
+          ],
+          "quantity": 1,
+          "user": "f0cd"
+        }
+      ],
+      "totalAmount": 1031,
+      "totalItems": 1,
+      "user": {
+        "id": "f0cd",
+        "email": "test@gmail.com",
+        "password": "Codingislove@1",
+        "role": "user",
+        "addresses": [
+          {
+            "name": "Navneet",
+            "email": "navneetkumar9810@gmail.com",
+            "phone": "9968567891",
+            "street": "7th Street",
+            "city": "New Delhi",
+            "state": "Delhi",
+            "pinCode": "110053"
+          },
+          {
+            "name": "Navneet",
+            "email": "Second Address",
+            "phone": "8920394834",
+            "street": "Second Street",
+            "city": "Second City",
+            "state": "Second State",
+            "pinCode": "110023"
+          },
+          {
+            "name": "Navneet",
+            "email": "navneetkumar9810@gmail.com",
+            "phone": "6549873138",
+            "street": "3rd Main Street",
+            "city": "New delhi",
+            "state": "delhi",
+            "pinCode": "110058"
+          }
+        ]
+      },
+      "selectedAddress": {
+        "name": "Navneet",
+        "email": "navneetkumar9810@gmail.com",
+        "phone": "9968567891",
+        "street": "7th Street",
+        "city": "New Delhi",
+        "state": "Delhi",
+        "pinCode": "110053"
+      },
+      "paymentMethod": "cash",
+      "status": "pending"
+    },
+    {
+      "id": "4879",
+      "items": [
+        {
+          "id": "3837",
+          "title": "Samsung Galaxy Book",
+          "description": "Samsung Galaxy Book S (2020) Laptop With Intel Lakefield Chip, 8GB of RAM Launched",
+          "price": 1499,
+          "discountPercentage": 4.15,
+          "rating": 4.25,
+          "stock": 50,
+          "brand": "Samsung",
+          "category": "laptops",
+          "thumbnail": "https://cdn.dummyjson.com/product-images/7/thumbnail.jpg",
+          "images": [
+            "https://cdn.dummyjson.com/product-images/7/1.jpg",
+            "https://cdn.dummyjson.com/product-images/7/2.jpg",
+            "https://cdn.dummyjson.com/product-images/7/3.jpg",
+            "https://cdn.dummyjson.com/product-images/7/thumbnail.jpg"
+          ],
+          "quantity": 1,
+          "user": "f0cd"
+        }
+      ],
+      "totalAmount": 1437,
+      "totalItems": 1,
+      "user": {
+        "id": "f0cd",
+        "email": "test@gmail.com",
+        "password": "Codingislove@1",
+        "role": "user",
+        "addresses": [
+          {
+            "name": "Navneet",
+            "email": "navneetkumar9810@gmail.com",
+            "phone": "9968567891",
+            "street": "7th Street",
+            "city": "New Delhi",
+            "state": "Delhi",
+            "pinCode": "110053"
+          },
+          {
+            "name": "Navneet",
+            "email": "Second Address",
+            "phone": "8920394834",
+            "street": "Second Street",
+            "city": "Second City",
+            "state": "Second State",
+            "pinCode": "110023"
+          },
+          {
+            "name": "Navneet",
+            "email": "navneetkumar9810@gmail.com",
+            "phone": "6549873138",
+            "street": "3rd Main Street",
+            "city": "New delhi",
+            "state": "delhi",
+            "pinCode": "110058"
+          }
+        ]
+      },
+      "selectedAddress": {
+        "name": "Navneet",
+        "email": "navneetkumar9810@gmail.com",
+        "phone": "6549873138",
+        "street": "3rd Main Street",
+        "city": "New delhi",
+        "state": "delhi",
+        "pinCode": "110058"
+      },
+      "paymentMethod": "cash",
+      "status": "pending"
+    },
+    {
+      "id": "48c2",
+      "items": [
+        {
+          "id": "f109",
+          "title": "HP Pavilion 15-DK1056WM",
+          "description": "HP Pavilion 15-DK1056WM Gaming Laptop 10th Gen Core i5, 8GB, 256GB SSD, GTX 1650 4GB, Windows 10",
+          "price": 1099,
+          "discountPercentage": 6.18,
+          "rating": 4.43,
+          "stock": 89,
+          "brand": "HP Pavilion",
+          "category": "laptops",
+          "thumbnail": "https://cdn.dummyjson.com/product-images/10/thumbnail.jpeg",
+          "images": [
+            "https://cdn.dummyjson.com/product-images/10/1.jpg",
+            "https://cdn.dummyjson.com/product-images/10/2.jpg",
+            "https://cdn.dummyjson.com/product-images/10/3.jpg",
+            "https://cdn.dummyjson.com/product-images/10/thumbnail.jpeg"
+          ],
+          "quantity": 1,
+          "user": "f0cd"
+        }
+      ],
+      "totalAmount": 1031,
+      "totalItems": 1,
+      "user": {
+        "id": "f0cd",
+        "email": "test@gmail.com",
+        "password": "Codingislove@1",
+        "role": "user",
+        "addresses": [
+          {
+            "name": "Navneet",
+            "email": "navneetkumar9810@gmail.com",
+            "phone": "9968567891",
+            "street": "7th Street",
+            "city": "New Delhi",
+            "state": "Delhi",
+            "pinCode": "110053"
+          },
+          {
+            "name": "Navneet",
+            "email": "Second Address",
+            "phone": "8920394834",
+            "street": "Second Street",
+            "city": "Second City",
+            "state": "Second State",
+            "pinCode": "110023"
+          },
+          {
+            "name": "Navneet",
+            "email": "navneetkumar9810@gmail.com",
+            "phone": "6549873138",
+            "street": "3rd Main Street",
+            "city": "New delhi",
+            "state": "delhi",
+            "pinCode": "110058"
+          }
+        ]
+      },
+      "selectedAddress": {
+        "name": "Navneet",
+        "email": "navneetkumar9810@gmail.com",
+        "phone": "9968567891",
+        "street": "7th Street",
+        "city": "New Delhi",
+        "state": "Delhi",
+        "pinCode": "110053"
+      },
+      "paymentMethod": "cash",
+      "status": "pending"
+    },
+    {
+      "id": "d145",
+      "items": [
+        {
+          "id": "f3cc",
+          "title": "Microsoft Surface Laptop 4",
+          "description": "Style and speed. Stand out on HD video calls backed by Studio Mics. Capture ideas on the vibrant touchscreen.",
+          "price": 1499,
+          "discountPercentage": 10.23,
+          "rating": 4.43,
+          "stock": 68,
+          "brand": "Microsoft Surface",
+          "category": "laptops",
+          "thumbnail": "https://cdn.dummyjson.com/product-images/8/thumbnail.jpg",
+          "images": [
+            "https://cdn.dummyjson.com/product-images/8/1.jpg",
+            "https://cdn.dummyjson.com/product-images/8/2.jpg",
+            "https://cdn.dummyjson.com/product-images/8/3.jpg",
+            "https://cdn.dummyjson.com/product-images/8/4.jpg",
+            "https://cdn.dummyjson.com/product-images/8/thumbnail.jpg"
+          ],
+          "quantity": 1,
+          "user": "f0cd"
+        },
+        {
+          "id": "a2ce",
+          "title": "Samsung Galaxy Book",
+          "description": "Samsung Galaxy Book S (2020) Laptop With Intel Lakefield Chip, 8GB of RAM Launched",
+          "price": 1499,
+          "discountPercentage": 4.15,
+          "rating": 4.25,
+          "stock": 50,
+          "brand": "Samsung",
+          "category": "laptops",
+          "thumbnail": "https://cdn.dummyjson.com/product-images/7/thumbnail.jpg",
+          "images": [
+            "https://cdn.dummyjson.com/product-images/7/1.jpg",
+            "https://cdn.dummyjson.com/product-images/7/2.jpg",
+            "https://cdn.dummyjson.com/product-images/7/3.jpg",
+            "https://cdn.dummyjson.com/product-images/7/thumbnail.jpg"
+          ],
+          "quantity": 1,
+          "user": "f0cd"
+        },
+        {
+          "id": "3e1b",
+          "title": "Microsoft Surface Laptop 4",
+          "description": "Style and speed. Stand out on HD video calls backed by Studio Mics. Capture ideas on the vibrant touchscreen.",
+          "price": 1499,
+          "discountPercentage": 10.23,
+          "rating": 4.43,
+          "stock": 68,
+          "brand": "Microsoft Surface",
+          "category": "laptops",
+          "thumbnail": "https://cdn.dummyjson.com/product-images/8/thumbnail.jpg",
+          "images": [
+            "https://cdn.dummyjson.com/product-images/8/1.jpg",
+            "https://cdn.dummyjson.com/product-images/8/2.jpg",
+            "https://cdn.dummyjson.com/product-images/8/3.jpg",
+            "https://cdn.dummyjson.com/product-images/8/4.jpg",
+            "https://cdn.dummyjson.com/product-images/8/thumbnail.jpg"
+          ],
+          "quantity": 1,
+          "user": "f0cd"
+        }
+      ],
+      "totalAmount": 4129,
+      "totalItems": 3,
+      "user": {
+        "id": "f0cd",
+        "email": "test@gmail.com",
+        "password": "Codingislove@1",
+        "role": "user",
         "addresses": [
           {
             "name": "Navneet",
