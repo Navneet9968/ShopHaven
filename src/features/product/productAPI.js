@@ -71,7 +71,7 @@ export function fetchProductsByFilters(filter, sort, pagination) {
       "http://localhost:8080/products?" + queryString
     );
     const data = await response.json();
-    const totalItems = response.headers.get("X-Total-Count");
+    const totalItems = await response.headers.get("X-Total-Count");
     resolve({ data: { products: data, totalItems: totalItems } });
   });
 }

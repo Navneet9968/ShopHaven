@@ -9,6 +9,7 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { EyeIcon, PencilIcon } from "@heroicons/react/16/solid";
 import Pagination from "../../common/Pagination";
+import { ArrowDownIcon, ArrowUpIcon } from "@heroicons/react/24/outline";
 
 function AdminOrders() {
   const [page, setPage] = useState(1);
@@ -38,25 +39,9 @@ function AdminOrders() {
   };
 
   const handleSort = (sortOption) => {
-    const newSort = { ...sort }; // Copy the current sort state
-    if (
-      newSort._sort === sortOption.sort ||
-      newSort._sort === "-" + sortOption.sort
-    ) {
-      // If the current sort is the same as the clicked column or its descending version
-      if (!newSort._sort.startsWith("-")) {
-        // If it's not already descending, make it descending
-        newSort._sort = "-" + sortOption.sort;
-      } else {
-        // If it's descending, make it ascending
-        newSort._sort = sortOption.sort;
-      }
-    } else {
-      // If clicking on a new column, default to ascending
-      newSort._sort = sortOption.sort;
-    }
-    setSort(newSort); // Apply the new sort state
-    console.log(sort);
+    const sort = { _sort: sortOption.sort, _order: sortOption.order };
+    console.log({ sort });
+    setSort(sort);
   };
 
   useEffect(() => {
@@ -96,12 +81,13 @@ function AdminOrders() {
                       })
                     }
                   >
-                    Order #
-                    {sort._sort === "id" || sort._sort === "-id"
-                      ? sort._sort === "id"
-                        ? "🔼"
-                        : "🔽"
-                      : null}
+                    Order#{' '}
+                    {sort._sort === 'id' &&
+                      (sort._order === 'asc' ? (
+                        <ArrowUpIcon className="w-4 h-4 inline"></ArrowUpIcon>
+                      ) : (
+                        <ArrowDownIcon className="w-4 h-4 inline"></ArrowDownIcon>
+                      ))}
                   </th>
                   <th className="py-3 px-6 text-left">Items</th>
                   <th className="py-3 px-6 text-left ">Total Amount</th>

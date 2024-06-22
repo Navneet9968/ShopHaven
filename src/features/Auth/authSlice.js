@@ -3,7 +3,7 @@ import { checkUser, createUser, signOut } from "./authAPI";
 import { updateUser } from "../user/userAPI";
 
 const initialState = {
-  loggedInUser: null,
+  loggedInUser: null, //this should contain only id, role,
   status: "idle",
   error: null,
 };
@@ -12,26 +12,21 @@ export const createUserAsync = createAsyncThunk(
   "auth/createUser",
   async (userData) => {
     const response = await createUser(userData);
-    // The value we return becomes the `fulfilled` action payload
     return response.data;
   }
 );
 
-export const updateUserAsync = createAsyncThunk(
-  "auth/updateUser",
-  async (update) => {
-    const response = await updateUser(update);
-    // The value we return becomes the `fulfilled` action payload
-    return response.data;
-  }
-);
 
 export const checkUserAsync = createAsyncThunk(
   "auth/checkUser",
-  async (loginInfo) => {
-    const response = await checkUser(loginInfo);
-    // The value we return becomes the `fulfilled` action payload
-    return response.data;
+  async (loginInfo, { rejectWithValue }) => {
+    try {
+      const response = await checkUser(loginInfo);
+      return response.data;
+    } catch (error) {
+      console.log("error = ", error);
+      return rejectWithValue(error);
+    }
   }
 );
 
@@ -69,14 +64,7 @@ export const authSlice = createSlice({
       })
       .addCase(checkUserAsync.rejected, (state, action) => {
         state.status = "idle";
-        state.error = action.error;
-      })
-      .addCase(updateUserAsync.pending, (state) => {
-        state.status = "loading";
-      })
-      .addCase(updateUserAsync.fulfilled, (state, action) => {
-        state.status = "idle";
-        state.loggedInUser = action.payload;
+        state.error = action.payload;
       })
       .addCase(signOutAsync.pending, (state) => {
         state.status = "loading";

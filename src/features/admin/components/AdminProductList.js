@@ -82,15 +82,9 @@ export default function AdminProductList() {
   };
 
   const handleSort = (e, option) => {
-    const newSort = {};
-    if (option.order === "asc") {
-      // If order is ascending, set _sort key in newFilter
-      newSort._sort = option.sort;
-    } else {
-      // If order is descending, set _sort key with "-" prefixed in newFilter
-      newSort._sort = "-" + option.sort;
-    }
-    setSort(newSort);
+    const sort = { _sort: option.sort, _order: option.order };
+    console.log({ sort });
+    setSort(sort);
   };
 
   const handlePage = (page) => {
