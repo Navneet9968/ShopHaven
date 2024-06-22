@@ -14,6 +14,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { resetCart } from "../../cart/cartAPI";
 import Modal from "../../common/Modal";
+import { useAlert } from "react-alert";
 
 function ProductForm() {
   const {
@@ -29,6 +30,8 @@ function ProductForm() {
   const dispatch = useDispatch();
   const params = useParams();
   const selectedProduct = useSelector(selectProductById);
+  const alert = useAlert();
+
 
   useEffect(() => {
     if (params.id) {
@@ -84,6 +87,7 @@ function ProductForm() {
             product.id = params.id;
             product.rating = selectedProduct.rating || 0;
             dispatch(updateProductAsync(product));
+            alert.success("Product updated successfully");
             reset();
           } else {
             dispatch(createProductAsync(product));
@@ -449,15 +453,17 @@ function ProductForm() {
         </div>
       </form>
       {console.log(selectedProduct)}
-      <Modal
-        title={`Delete ${selectedProduct?.title} ?`}
-        message="Are you sure you want to delete this product ?"
-        dangerOption="Delete"
-        cancelOption="Cancel"
-        dangerAction={handleDelete}
-        showModal={openModal}
-        cancelAction={() => setOpenModal(null)}
-      />
+      {selectedProduct && (
+        <Modal
+          title={`Delete ${selectedProduct?.title} ?`}
+          message="Are you sure you want to delete this product ?"
+          dangerOption="Delete"
+          cancelOption="Cancel"
+          dangerAction={handleDelete}
+          showModal={openModal}
+          cancelAction={() => setOpenModal(null)}
+        />
+      )}
     </>
   );
 }

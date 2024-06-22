@@ -110,14 +110,14 @@ function AdminOrders() {
                         <div className="flex items-center">
                           <div className="mr-2">
                             <img
-                              alt={item.description}
+                              alt={item.product.description}
                               className="w-6 h-6 rounded-full"
-                              src={item.thumbnail}
+                              src={item.product.thumbnail}
                             />
                           </div>
                           <span>
-                            {item.title} - #{item.quantity} - $
-                            {discountedPrice(item)}
+                            {item.product.title} - #{item.quantity} - $
+                            {discountedPrice(item.product)}
                           </span>
                         </div>
                       ))}
