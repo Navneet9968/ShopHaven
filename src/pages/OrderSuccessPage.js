@@ -2,18 +2,15 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, Navigate, useParams } from "react-router-dom";
 import { resetCartAsync } from "../features/cart/cartSlice";
-import { selectLoggedInUser } from "../features/Auth/authSlice";
-import { resetCart } from "../features/cart/cartAPI";
 import { resetOrder } from "../features/order/orderSlice";
 function OrderSuccessPage() {
   const params = useParams();
   const dispatch = useDispatch();
-  const user =useSelector(selectLoggedInUser);
 
   useEffect(() => {
-    dispatch(resetCartAsync(user.id));
+    dispatch(resetCartAsync());
     dispatch(resetOrder());
-  }, [dispatch,user]);
+  }, [dispatch]);
   return (
     <>
       {!params.id && <Navigate to="/" replace={true}></Navigate>}
@@ -26,7 +23,7 @@ function OrderSuccessPage() {
             Order No #{params.id}
           </h1>
           <p className="mt-6 text-base leading-7 text-gray-600">
-            Check your order in My Account > My Orders.
+            Check your order in My Account {">"} My Orders.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <Link

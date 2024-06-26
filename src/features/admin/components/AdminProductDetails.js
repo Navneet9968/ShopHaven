@@ -9,7 +9,6 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { addToCartAsync } from "../../cart/cartSlice";
-import { selectLoggedInUser } from "../../Auth/authSlice";
 import { discountedPrice } from "../../../app/constants";
 
 //TODO : In server data we will add colors,sizes ,highlights etc
@@ -45,12 +44,11 @@ export default function AdminProductDetail() {
   const product = useSelector(selectProductById);
   const dispatch = useDispatch();
   const params = useParams();
-  const user = useSelector(selectLoggedInUser);
 
   const handleAddToCart = (e) => {
     e.preventDefault();
     //TODO : Add to cart functionality
-    const newItem = { ...product, quantity: 1, user: user.id };
+    const newItem = { ...product, quantity: 1};
     delete newItem["id"];
 
     dispatch(addToCartAsync(newItem));

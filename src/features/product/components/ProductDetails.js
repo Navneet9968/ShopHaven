@@ -45,7 +45,6 @@ export default function ProductDetail() {
   console.log(product);
   const dispatch = useDispatch();
   const params = useParams();
-  const user = useSelector(selectLoggedInUser);
   const items = useSelector(selectItems);
 
   const handleAddToCart = (e) => {
@@ -55,7 +54,6 @@ export default function ProductDetail() {
       const newItem = {
         product: product.id,
         quantity: 1,
-        user: user.id,
       };
       dispatch(addToCartAsync(newItem));
       alert.success("Product added to cart");
