@@ -3,12 +3,7 @@ import "./App.css";
 import Home from "./pages/Home";
 
 //router
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Route,
-  Link,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
 import CartPage from "./pages/CartPage";
@@ -16,7 +11,7 @@ import Checkout from "./pages/Checkout";
 import ProductDetailPage from "./pages/ProductDetailPage";
 import Protected from "./features/Auth/components/Protected";
 import { fetchItemsByUserIdAsync } from "./features/cart/cartSlice";
-import { selectLoggedInUser } from "./features/Auth/authSlice";
+import { checkAuthAsync, selectLoggedInUser, selectUserChecked } from "./features/Auth/authSlice";
 import { useDispatch, useSelector } from "react-redux";
 import PageNotFound from "./pages/404";
 import OrderSuccessPage from "./pages/OrderSuccessPage";
@@ -149,6 +144,10 @@ const router = createBrowserRouter([
 function App() {
   const dispatch = useDispatch();
   const user = useSelector(selectLoggedInUser);
+  const userChecked=useSelector(selectUserChecked);
+  useEffect(() => {
+    dispatch(checkAuthAsync());
+  }, [dispatch]);
   useEffect(() => {
     if (user) {
       dispatch(fetchItemsByUserIdAsync());
@@ -158,9 +157,9 @@ function App() {
 
   return (
     <div className="App">
-      <Provider template={AlertTemplate} {...options}>
+      {userChecked && <Provider template={AlertTemplate} {...options}>
         <RouterProvider router={router} />
-      </Provider>
+      </Provider>}
     </div>
   );
 }

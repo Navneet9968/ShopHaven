@@ -89,7 +89,6 @@ function Checkout() {
                     addresses: [...user.addresses, data],
                   })
                 );
-                // checkUserAsync({ email: data.email, password: data.password })
               })}
             >
               <div className="space-y-12">

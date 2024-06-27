@@ -5,6 +5,7 @@ import { Link, Navigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {
   deleteItemFromCartAsync,
+  selectCartLoaded,
   selectCartStatus,
   selectItems,
   updateCartAsync,
@@ -16,9 +17,10 @@ import Modal from "../common/Modal";
 
 export default function Cart() {
   const items = useSelector(selectItems);
-
+  const cartLoaded = useSelector(selectCartLoaded);
   const dispatch = useDispatch();
   const [open, setOpen] = useState(true);
+
 
   const totalAmount = items.reduce(
     (amount, item) => discountedPrice(item.product) * item.quantity + amount,
@@ -37,7 +39,7 @@ export default function Cart() {
 
   return (
     <>
-      {items.length === 0 && <Navigate to="/" replace={true} />}
+      {items.length === 0 && cartLoaded && <Navigate to="/" replace={true} />}
 
       <div className="mt-12 bg-white mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="border-t border-gray-200 px-4 py-6 sm:px-6">

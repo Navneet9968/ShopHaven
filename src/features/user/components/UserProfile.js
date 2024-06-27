@@ -88,7 +88,6 @@ export default function UserProfile() {
                 console.log(data);
                 handleAdd(data);
                 reset();
-                // checkUserAsync({ email: data.email, password: data.password })
               })}
             >
               <div className="space-y-12">
@@ -258,7 +257,6 @@ export default function UserProfile() {
                   onSubmit={handleSubmit((data) => {
                     handleEdit(data, index);
                     reset();
-                    // checkUserAsync({ email: data.email, password: data.password })
                   })}
                 >
                   <div className="space-y-12">
