@@ -11,7 +11,11 @@ import Checkout from "./pages/Checkout";
 import ProductDetailPage from "./pages/ProductDetailPage";
 import Protected from "./features/Auth/components/Protected";
 import { fetchItemsByUserIdAsync } from "./features/cart/cartSlice";
-import { checkAuthAsync, selectLoggedInUser, selectUserChecked } from "./features/Auth/authSlice";
+import {
+  checkAuthAsync,
+  selectLoggedInUser,
+  selectUserChecked,
+} from "./features/Auth/authSlice";
 import { useDispatch, useSelector } from "react-redux";
 import PageNotFound from "./pages/404";
 import OrderSuccessPage from "./pages/OrderSuccessPage";
@@ -27,6 +31,7 @@ import AdminProductFormPage from "./pages/AdminProductFormPage";
 import AdminOrdersPage from "./pages/AdminOrdersPage";
 import { positions, Provider } from "react-alert";
 import AlertTemplate from "react-alert-template-basic";
+import StripeCheckout from "./pages/StripeCheckout";
 
 const options = {
   timeout: 5000,
@@ -120,12 +125,20 @@ const router = createBrowserRouter([
     element: <OrderSuccessPage />,
   },
   {
-    path: "/orders",
+    path: "/my-orders",
     element: <UserOrdersPage />,
   },
   {
     path: "/profile",
     element: <UserProfilePage />,
+  },
+  {
+    path: "/stripe-checkout",
+    element: (
+      <Protected>
+        <StripeCheckout />
+      </Protected>
+    ),
   },
   {
     path: "/logout",
@@ -144,7 +157,7 @@ const router = createBrowserRouter([
 function App() {
   const dispatch = useDispatch();
   const user = useSelector(selectLoggedInUser);
-  const userChecked=useSelector(selectUserChecked);
+  const userChecked = useSelector(selectUserChecked);
   useEffect(() => {
     dispatch(checkAuthAsync());
   }, [dispatch]);
@@ -157,9 +170,11 @@ function App() {
 
   return (
     <div className="App">
-      {userChecked && <Provider template={AlertTemplate} {...options}>
-        <RouterProvider router={router} />
-      </Provider>}
+      {userChecked && (
+        <Provider template={AlertTemplate} {...options}>
+          <RouterProvider router={router} />
+        </Provider>
+      )}
     </div>
   );
 }

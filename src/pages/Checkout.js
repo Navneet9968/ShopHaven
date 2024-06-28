@@ -48,7 +48,7 @@ function Checkout() {
         items,
         totalAmount,
         totalItems,
-        user:user.id,
+        user: user.id,
         selectedAddress,
         paymentMethod,
         status: "pending", //admin can later change it to dispatched or delivered
@@ -73,8 +73,12 @@ function Checkout() {
   return (
     <>
       {items.length == 0 && <Navigate to="/" replace={true} />}
-      {currentOrder && (
+      {currentOrder && currentOrder.paymentMethod === "cash" && (
         <Navigate to={`/order-success/${currentOrder.id}`} replace={true} />
+      )}
+
+      {currentOrder && currentOrder.paymentMethod === "card" && (
+        <Navigate to={`/stripe-checkout/`} replace={true} />
       )}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-5">
