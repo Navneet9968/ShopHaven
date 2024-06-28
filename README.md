@@ -2,6 +2,8 @@
 #  MERN Stack ShopHaven Project
 Welcome to ShopHaven! This application is a full-featured e-commerce platform built with the MERN stack (MongoDB, Express, React, Node.js).
 
+# Deployed Link -> https://ecommerce-vercel-snowy.vercel.app/
+
 # 🔥 Features 
 ## Basic Features
 - Product lists
